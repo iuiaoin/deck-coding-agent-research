@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLI 类工具</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 70px 100px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0 0 15px 0;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #E07A59;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .tool-section {
+      margin-bottom: 30px;
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .tool-section:nth-child(3) { animation-delay: 0.1s; }
+    .tool-section:nth-child(4) { animation-delay: 0.2s; }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .tool-name {
+      color: #2B2A27;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .tool-badge {
+      background: #E07A59;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-left: 15px;
+      font-weight: 600;
+    }
+
+    .tool-desc {
+      color: #5D4E42;
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .tool-highlight {
+      color: #2B2A27;
+      font-weight: 600;
+    }
+
+    .comparison {
+      margin-top: 25px;
+      padding: 20px 25px;
+      background: rgba(224, 122, 89, 0.08);
+      border-radius: 8px;
+      border-left: 4px solid #E07A59;
+    }
+
+    .comparison-title {
+      color: #2B2A27;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .comparison-text {
+      color: #5D4E42;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>CLI 类：Claude Code / Codex CLI</h1>
+    <div class="subtitle">终端代理型工具</div>
+
+    <div class="tool-section">
+      <div class="tool-name">
+        Claude Code CLI
+        <span class="tool-badge">Anthropic</span>
+      </div>
+      <div class="tool-desc">
+        对话式终端工程师，支持<span class="tool-highlight">多文件编辑、MCP 扩展、权限审批、长时任务</span>
+      </div>
+      <div class="tool-desc">
+        适用场景：复杂改造、DevOps 自动化、跨文件重构
+      </div>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-name">
+        Codex CLI
+        <span class="tool-badge">OpenAI</span>
+      </div>
+      <div class="tool-desc">
+        终端代理，<span class="tool-highlight">审批模式（Auto/Read-Only/Full Access）</span>、图像输入支持
+      </div>
+      <div class="tool-desc">
+        开源客户端（Rust），模型可切换，支持 GPT-5 Codex 专用模型
+      </div>
+    </div>
+
+    <div class="comparison">
+      <div class="comparison-title">对比要点</div>
+      <div class="comparison-text">
+        自主性、权限治理、扩展性（MCP 协议）、长任务稳定性、成本可控性<br/>
+        流程图：需求 → 规划 → 读写文件/运行命令 → 测试验证 → 提交变更
+      </div>
+    </div>
+
+    <div class="page-number">5</div>
+  </div>
+</body>
+</html>

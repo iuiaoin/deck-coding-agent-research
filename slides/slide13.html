@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最佳实践与坑</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 70px 100px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0 0 45px 0;
+      padding-bottom: 15px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .practice-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .practice-item {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 22px 25px;
+      border-radius: 8px;
+      border-left: 3px solid #9FD3B8;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .practice-item:nth-child(1) { animation-delay: 0.1s; }
+    .practice-item:nth-child(2) { animation-delay: 0.15s; }
+    .practice-item:nth-child(3) { animation-delay: 0.2s; }
+    .practice-item:nth-child(4) { animation-delay: 0.25s; }
+    .practice-item:nth-child(5) { animation-delay: 0.3s; }
+    .practice-item:nth-child(6) { animation-delay: 0.35s; }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.97); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    .practice-icon {
+      color: #E07A59;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .practice-title {
+      color: #2B2A27;
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .practice-desc {
+      color: #5D4E42;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>最佳实践与坑</h1>
+
+    <div class="practice-list">
+      <div class="practice-item">
+        <div class="practice-icon">✓</div>
+        <div class="practice-title">写清目标与验收</div>
+        <div class="practice-desc">让 Agent 复述计划，确认理解正确</div>
+      </div>
+
+      <div class="practice-item">
+        <div class="practice-icon">✓</div>
+        <div class="practice-title">小步验证</div>
+        <div class="practice-desc">强制 Diff 审阅，设置回滚点</div>
+      </div>
+
+      <div class="practice-item">
+        <div class="practice-icon">✓</div>
+        <div class="practice-title">最少权限原则</div>
+        <div class="practice-desc">目录白名单、命令黑名单</div>
+      </div>
+
+      <div class="practice-item">
+        <div class="practice-icon">✓</div>
+        <div class="practice-title">成本控制</div>
+        <div class="practice-desc">长任务拆分、缓存上下文、复用记忆</div>
+      </div>
+
+      <div class="practice-item">
+        <div class="practice-icon">✓</div>
+        <div class="practice-title">团队落地</div>
+        <div class="practice-desc">统一 .rules / AGENT.md</div>
+      </div>
+
+      <div class="practice-item">
+        <div class="practice-icon">✓</div>
+        <div class="practice-title">提示词模板</div>
+        <div class="practice-desc">沉淀常用 Prompt，提升效率</div>
+      </div>
+    </div>
+
+    <div class="page-number">13</div>
+  </div>
+</body>
+</html>

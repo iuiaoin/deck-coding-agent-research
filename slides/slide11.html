@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>典型工作流</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 70px 100px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0 0 45px 0;
+      padding-bottom: 15px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .workflow {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 25px 30px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .workflow:nth-child(2) { animation-delay: 0.1s; border-left: 4px solid #E07A59; }
+    .workflow:nth-child(3) { animation-delay: 0.2s; border-left: 4px solid #9FD3B8; }
+    .workflow:nth-child(4) { animation-delay: 0.3s; border-left: 4px solid #E07A59; }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    .workflow-title {
+      color: #2B2A27;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .workflow-badge {
+      background: #E07A59;
+      color: white;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-left: 12px;
+      font-weight: 600;
+    }
+
+    .workflow-steps {
+      color: #5D4E42;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .arrow {
+      color: #E07A59;
+      font-weight: 700;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>典型工作流范式</h1>
+
+    <div class="workflow">
+      <div class="workflow-title">
+        需求驱动重构
+        <span class="workflow-badge">CLI 最优</span>
+      </div>
+      <div class="workflow-steps">
+        描述目标 <span class="arrow">→</span> 规划方案 <span class="arrow">→</span> 批量编辑 <span class="arrow">→</span> 测试验证 <span class="arrow">→</span> PR 提交
+      </div>
+    </div>
+
+    <div class="workflow">
+      <div class="workflow-title">
+        快速原型迭代
+        <span class="workflow-badge">IDE 最优</span>
+      </div>
+      <div class="workflow-steps">
+        需求输入 <span class="arrow">→</span> AI 生成 <span class="arrow">→</span> 即时预览 <span class="arrow">→</span> 人工微调 <span class="arrow">→</span> 快速部署
+      </div>
+    </div>
+
+    <div class="workflow">
+      <div class="workflow-title">
+        企业协作规范
+        <span class="workflow-badge">Copilot/混合</span>
+      </div>
+      <div class="workflow-steps">
+        规则模板 <span class="arrow">→</span> AI 辅助开发 <span class="arrow">→</span> Code Review <span class="arrow">→</span> 合规流水线 <span class="arrow">→</span> 上线
+      </div>
+    </div>
+
+    <div class="page-number">11</div>
+  </div>
+</body>
+</html>

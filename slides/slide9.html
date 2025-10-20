@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云端 Agent</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 70px 100px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 40px 0;
+      line-height: 1.2;
+      padding-bottom: 15px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+
+    .tool-card {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 25px;
+      border-radius: 8px;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .tool-card:nth-child(1) { animation-delay: 0.1s; border-left: 4px solid #E07A59; }
+    .tool-card:nth-child(2) { animation-delay: 0.2s; border-left: 4px solid #9FD3B8; }
+    .tool-card:nth-child(3) { animation-delay: 0.3s; border-left: 4px solid #E07A59; }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    .tool-name {
+      color: #2B2A27;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .tool-desc {
+      color: #5D4E42;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .tool-scene {
+      color: #E07A59;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    .matrix-hint {
+      background: rgba(224, 122, 89, 0.08);
+      padding: 20px 25px;
+      border-radius: 8px;
+      color: #5D4E42;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>云端 Agent</h1>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-name">Devin</div>
+        <div class="tool-desc">
+          端到端工程任务<br/>
+          云端执行、长链路任务<br/>
+          Slack/Linear 集成
+        </div>
+        <div class="tool-scene">适合：研究与全托管试验</div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">V0</div>
+        <div class="tool-desc">
+          前端/产品原型<br/>
+          从描述到产物<br/>
+          Vercel 深度整合
+        </div>
+        <div class="tool-scene">适合：UI 快速生成</div>
+      </div>
+    </div>
+
+    <div class="matrix-hint">
+      矩阵图：自动化强度 × 可控性/合规
+    </div>
+
+    <div class="page-number">9</div>
+  </div>
+</body>
+</html>

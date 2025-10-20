@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来展望</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 70px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #E07A59;
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-bottom: 0;
+      flex: 1;
+    }
+
+    .vision-card {
+      background: rgba(224, 122, 89, 0.08);
+      padding: 24px 26px;
+      border-radius: 10px;
+      border-left: 5px solid #E07A59;
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .vision-card:nth-child(1) { animation-delay: 0.1s; }
+    .vision-card:nth-child(2) { animation-delay: 0.2s; }
+    .vision-card:nth-child(3) { animation-delay: 0.3s; }
+    .vision-card:nth-child(4) { animation-delay: 0.4s; }
+    .vision-card:nth-child(5) { animation-delay: 0.5s; }
+    .vision-card:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .vision-title {
+      color: #2B2A27;
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vision-icon {
+      font-size: 20px;
+    }
+
+    .vision-text {
+      color: #5D4E42;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .highlight {
+      color: #E07A59;
+      font-weight: 600;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>未来展望：AI编程智能体的进化方向</h1>
+    <div class="subtitle">从助手到真正的"AI开发者"</div>
+
+    <div class="vision-grid">
+      <div class="vision-card">
+        <div class="vision-title">
+          <span class="vision-icon">💻</span>
+          IDE有机组成部分
+        </div>
+        <div class="vision-text">
+          AI成为IDE不可或缺的一环，界面重构以AI交互为中心，显示知识图谱和任务列表
+        </div>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-title">
+          <span class="vision-icon">🔄</span>
+          多轮自主编码
+        </div>
+        <div class="vision-text">
+          高层需求 → 自主规划 → 编码测试 → 部署交付，全程闭环处理长程任务
+        </div>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-title">
+          <span class="vision-icon">🎯</span>
+          覆盖软件开发全流程
+        </div>
+        <div class="vision-text">
+          需求分析、架构设计、编码、测试、部署、运维全链路AI参与
+        </div>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-title">
+          <span class="vision-icon">🏢</span>
+          组织知识深度融合
+        </div>
+        <div class="vision-text">
+          内化企业代码库、规范、业务逻辑，连接JIRA、Git、Wiki等系统
+        </div>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-title">
+          <span class="vision-icon">✅</span>
+          更高级验证与可信度
+        </div>
+        <div class="vision-text">
+          形式化验证、静态分析、思维报告，确保AI产出可靠可解释
+        </div>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-title">
+          <span class="vision-icon">🤝</span>
+          人机协作新范式
+        </div>
+        <div class="vision-text">
+          <span class="highlight">人类：</span>创意+判断<br/>
+          <span class="highlight">AI：</span>海量知识+重复劳动
+        </div>
+      </div>
+    </div>
+
+    <div class="page-number">16</div>
+  </div>
+</body>
+</html>

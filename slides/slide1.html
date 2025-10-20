@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Coding Agent 工具比较与实战体会</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px;
+      box-sizing: border-box;
+    }
+
+    .slide-content {
+        z-index: 2;
+        animation: fadeInContent 1.2s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeInContent {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      color: #2B2A27;
+      margin: 0 0 30px 0;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 500;
+      color: #5D4E42;
+      margin: 0;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 50px;
+      right: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      z-index: 2;
+      animation: fadeInContent 1.2s ease-in-out 0.3s forwards;
+      opacity: 0;
+    }
+
+    .presenter {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2B2A27;
+      margin-bottom: 8px;
+    }
+
+    .date {
+      font-size: 18px;
+      color: #5D4E42;
+    }
+
+    .accent-shape {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        animation: fadeInShape 2s ease-out forwards;
+    }
+
+    @keyframes fadeInShape {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .shape1 {
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(224, 122, 89, 0.12) 0%, rgba(224, 122, 89, 0) 70%);
+        top: -150px;
+        left: -150px;
+        animation-delay: 0.2s;
+    }
+
+    .shape2 {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(159, 211, 184, 0.08) 0%, rgba(159, 211, 184, 0) 70%);
+        bottom: -200px;
+        right: -200px;
+        animation-delay: 0.5s;
+    }
+
+    .shape3 {
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(circle, rgba(224, 122, 89, 0.08) 0%, rgba(224, 122, 89, 0) 70%);
+        top: 100px;
+        right: 50px;
+        animation-delay: 0.8s;
+    }
+
+    .divider {
+      width: 80px;
+      height: 4px;
+      background-color: #E07A59;
+      margin: 30px 0;
+      border-radius: 2px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="accent-shape shape1"></div>
+    <div class="accent-shape shape2"></div>
+    <div class="accent-shape shape3"></div>
+    <div class="slide-content">
+      <h1>AI Coding Agent 工具<br/>横向比较与实战体会</h1>
+      <div class="divider"></div>
+      <h2>从能力、产品形态、落地门槛到团队采用</h2>
+    </div>
+    <div class="footer">
+      <div class="presenter">Xiaolin</div>
+      <div class="date">2025年10月</div>
+    </div>
+  </div>
+</body>
+</html>

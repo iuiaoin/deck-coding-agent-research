@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>评价维度</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 55px 90px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 46px;
+      font-weight: 700;
+      margin: 0 0 30px 0;
+      line-height: 1.2;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .dimensions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px 30px;
+    }
+
+    .dimension-item {
+      background: rgba(255, 255, 255, 0.4);
+      padding: 16px 20px;
+      border-radius: 8px;
+      border-left: 3px solid #9FD3B8;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .dimension-item:nth-child(1) { animation-delay: 0.1s; }
+    .dimension-item:nth-child(2) { animation-delay: 0.15s; }
+    .dimension-item:nth-child(3) { animation-delay: 0.2s; }
+    .dimension-item:nth-child(4) { animation-delay: 0.25s; }
+    .dimension-item:nth-child(5) { animation-delay: 0.3s; }
+    .dimension-item:nth-child(6) { animation-delay: 0.35s; }
+    .dimension-item:nth-child(7) { animation-delay: 0.4s; }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .dimension-number {
+      color: #E07A59;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .dimension-title {
+      color: #2B2A27;
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .dimension-desc {
+      color: #5D4E42;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: rgba(224, 122, 89, 0.08);
+      border-radius: 6px;
+      color: #5D4E42;
+      font-size: 14px;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>评价维度</h1>
+
+    <div class="dimensions-grid">
+      <div class="dimension-item">
+        <div class="dimension-number">① 项目理解/检索</div>
+        <div class="dimension-title">代码库规模与跨文件能力</div>
+        <div class="dimension-desc">支持 Repo 规模、上下文窗口、跨文件依赖理解</div>
+      </div>
+
+      <div class="dimension-item">
+        <div class="dimension-number">② 自主计划与执行</div>
+        <div class="dimension-title">多步任务规划能力</div>
+        <div class="dimension-desc">拆解任务、自主决策、迭代执行</div>
+      </div>
+
+      <div class="dimension-item">
+        <div class="dimension-number">③ 编辑与变更透明度</div>
+        <div class="dimension-title">Diff 审阅与批量编辑</div>
+        <div class="dimension-desc">代码变更可见性、人工确认流程</div>
+      </div>
+
+      <div class="dimension-item">
+        <div class="dimension-number">④ 终端/外部工具</div>
+        <div class="dimension-title">MCP、Web、CI 集成</div>
+        <div class="dimension-desc">命令执行、联网搜索、工具扩展能力</div>
+      </div>
+
+      <div class="dimension-item">
+        <div class="dimension-number">⑤ 稳定性与可恢复</div>
+        <div class="dimension-title">回滚与记忆机制</div>
+        <div class="dimension-desc">任务中断恢复、历史记录、回退能力</div>
+      </div>
+
+      <div class="dimension-item">
+        <div class="dimension-number">⑥ 部署与合规</div>
+        <div class="dimension-title">本地/私有化/权限</div>
+        <div class="dimension-desc">企业部署模式、数据安全、权限控制</div>
+      </div>
+
+      <div class="dimension-item">
+        <div class="dimension-number">⑦ 成本模型</div>
+        <div class="dimension-title">定价与可预期性</div>
+        <div class="dimension-desc">订阅制 vs 按量付费、成本可控性</div>
+      </div>
+    </div>
+
+    <div class="note">
+      基于以上维度，我们将对各主流工具进行 1-5 分评分与对比分析
+    </div>
+
+    <div class="page-number">4</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选型建议</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 80px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 40px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #E07A59;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .recommendation {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 16px 22px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border-left: 4px solid #9FD3B8;
+      animation: slideIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .recommendation:nth-child(3) { animation-delay: 0.1s; }
+    .recommendation:nth-child(4) { animation-delay: 0.2s; }
+    .recommendation:nth-child(5) { animation-delay: 0.3s; }
+    .recommendation:nth-child(6) { animation-delay: 0.4s; }
+
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-15px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    .rec-role {
+      color: #E07A59;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .rec-tools {
+      color: #2B2A27;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .rec-reason {
+      color: #5D4E42;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .decision-tree-hint {
+      margin-top: 12px;
+      padding: 12px 18px;
+      background: rgba(224, 122, 89, 0.08);
+      border-radius: 6px;
+      color: #5D4E42;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>选型建议</h1>
+    <div class="subtitle">分角色推荐</div>
+
+    <div class="recommendation">
+      <div class="rec-role">个人黑客 / 初创团队 / 初学者</div>
+      <div class="rec-tools">Windsurf / Cursor</div>
+      <div class="rec-reason">快速迭代、开箱即用、学习成本低</div>
+    </div>
+
+    <div class="recommendation">
+      <div class="rec-role">团队工程（稳态生产力）</div>
+      <div class="rec-tools">VS Code + Copilot + 定点引入 CLI Agent</div>
+      <div class="rec-reason">日常补全稳定可靠，复杂任务用 CLI 工具处理</div>
+    </div>
+
+    <div class="recommendation">
+      <div class="rec-role">研究与全托管</div>
+      <div class="rec-tools">Devin（端到端）</div>
+      <div class="rec-reason">云端执行、长链路任务，注意成本与权限控制</div>
+    </div>
+
+    <div class="recommendation">
+      <div class="rec-role">开源可定制</div>
+      <div class="rec-tools">Cline / BYOK 方案</div>
+      <div class="rec-reason">透明、可审计、自带模型密钥、私有部署</div>
+    </div>
+
+    <div class="decision-tree-hint">
+      决策树小图：需求复杂度 × 团队规模 × 合规要求
+    </div>
+
+    <div class="page-number">12</div>
+  </div>
+</body>
+</html>

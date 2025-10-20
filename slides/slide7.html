@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDE 类：Windsurf</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 55px 90px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 28px 0;
+      line-height: 1.2;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 18px 20px;
+      border-radius: 8px;
+      border-left: 3px solid #9FD3B8;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .feature-card:nth-child(1) { animation-delay: 0.1s; }
+    .feature-card:nth-child(2) { animation-delay: 0.2s; }
+    .feature-card:nth-child(3) { animation-delay: 0.3s; }
+    .feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feature-title {
+      color: #E07A59;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .feature-text {
+      color: #5D4E42;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: rgba(159, 211, 184, 0.15);
+      padding: 18px 22px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .highlight-title {
+      color: #2B2A27;
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .highlight-text {
+      color: #5D4E42;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>IDE 类：Windsurf</h1>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-title">Cascade 代理内核</div>
+        <div class="feature-text">
+          默认聊天即 Agent 模式<br/>
+          自动检索上下文，无需手动添加文件
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-title">一键达成目标</div>
+        <div class="feature-text">
+          自动定位涉及文件<br/>
+          生成方案 → 运行命令 → 提议结果
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-title">Memories / Rules</div>
+        <div class="feature-text">
+          持续记录项目重要信息<br/>
+          学习框架模式与用户偏好
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-title">Turbo Mode</div>
+        <div class="feature-text">
+          自动执行终端命令无需确认<br/>
+          适合信任 AI 且追求最大自动化场景
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <div class="highlight-title">设计取向：流畅体验 vs Cursor 精细掌控</div>
+      <div class="highlight-text">
+        更"开箱即用"，强调简单易用和自动化<br/>
+        界面简洁，尽量减少按钮，让 AI 交互平滑融入<br/>
+        适合希望 AI 主动担负更多工作的场景
+      </div>
+    </div>
+
+    <div class="page-number">7</div>
+  </div>
+</body>
+</html>

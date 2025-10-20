@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作为开发者的应对建议</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 70px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 35px 0;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .recommendations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .rec-card {
+      background: rgba(224, 122, 89, 0.08);
+      padding: 22px 26px;
+      border-radius: 10px;
+      border-left: 5px solid #E07A59;
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .rec-card:nth-child(1) { animation-delay: 0.05s; }
+    .rec-card:nth-child(2) { animation-delay: 0.1s; }
+    .rec-card:nth-child(3) { animation-delay: 0.15s; }
+    .rec-card:nth-child(4) { animation-delay: 0.2s; }
+    .rec-card:nth-child(5) { animation-delay: 0.25s; }
+    .rec-card:nth-child(6) { animation-delay: 0.3s; }
+    .rec-card:nth-child(7) { animation-delay: 0.35s; }
+    .rec-card:nth-child(8) { animation-delay: 0.4s; }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .rec-title {
+      color: #2B2A27;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 9px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rec-icon {
+      font-size: 18px;
+    }
+
+    .rec-text {
+      color: #5D4E42;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #E07A59;
+      font-weight: 600;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>作为开发者的应对建议</h1>
+
+    <div class="recommendations-grid">
+      <div class="rec-card">
+        <div class="rec-title">
+          <span class="rec-icon">🧪</span>
+          主动试用工具
+        </div>
+        <div class="rec-text">
+          从GitHub Copilot入手，试用Cursor、Windsurf等，积累实践经验
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-title">
+          <span class="rec-icon">👁️</span>
+          执行人类监护原则
+        </div>
+        <div class="rec-text">
+          始终审查AI代码，执行code review和测试，不盲目信任
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-title">
+          <span class="rec-icon">🔒</span>
+          关注数据安全
+        </div>
+        <div class="rec-text">
+          选择企业版服务或自托管方案，避免机密代码泄露
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-title">
+          <span class="rec-icon">📚</span>
+          持续学习跟进
+        </div>
+        <div class="rec-text">
+          订阅行业博客，关注LLM动态、Agent框架和最佳实践
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-title">
+          <span class="rec-icon">🎯</span>
+          小步试水扩大应用
+        </div>
+        <div class="rec-text">
+          从非关键路径开始，逐步让AI参与更大功能开发
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-title">
+          <span class="rec-icon">🚀</span>
+          提升创造力和抽象能力
+        </div>
+        <div class="rec-text">
+          专注架构设计、性能优化，训练Context Engineering技巧
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-title">
+          <span class="rec-icon">👥</span>
+          在团队推动AI赋能
+        </div>
+        <div class="rec-text">
+          演示工具价值，建立使用规范，成为团队AI倡导者
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-title">
+          <span class="rec-icon">💡</span>
+          融入产品服务
+        </div>
+        <div class="rec-text">
+          探索将AI Agent应用到自家产品，构建AI驱动功能
+        </div>
+      </div>
+    </div>
+
+    <div class="page-number">17</div>
+  </div>
+</body>
+</html>

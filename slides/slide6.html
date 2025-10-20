@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDE 类：Cursor</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 55px 90px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 28px 0;
+      line-height: 1.2;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 18px 20px;
+      border-radius: 8px;
+      border-left: 3px solid #9FD3B8;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .feature-card:nth-child(1) { animation-delay: 0.1s; }
+    .feature-card:nth-child(2) { animation-delay: 0.2s; }
+    .feature-card:nth-child(3) { animation-delay: 0.3s; }
+    .feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feature-title {
+      color: #E07A59;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .feature-text {
+      color: #5D4E42;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: rgba(224, 122, 89, 0.12);
+      padding: 18px 22px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .highlight-title {
+      color: #2B2A27;
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .highlight-text {
+      color: #5D4E42;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>IDE 类：Cursor</h1>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-title">核心特点：TAB Edit</div>
+        <div class="feature-text">
+          多点联动修改，跳转同步更改<br/>
+          重构时自动处理类型签名变更
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-title">Agent / Background Agent</div>
+        <div class="feature-text">
+          自动检索相关文件<br/>
+          后台任务执行，逐步向云端发展
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-title">Diff 审阅与控制</div>
+        <div class="feature-text">
+          内联 diff 查看<br/>
+          手动确认每步修改，确保代码质量
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-title">规则文件与 Memory</div>
+        <div class="feature-text">
+          .cursorrules 项目规范<br/>
+          支持记忆机制，逐步学习项目风格
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <div class="highlight-title">设计取向：精细掌控</div>
+      <div class="highlight-text">
+        允许手动控制上下文文件、逐步应用 diff<br/>
+        适合注重代码质量和过程透明的团队<br/>
+        学习曲线中等，控制权强
+      </div>
+    </div>
+
+    <div class="page-number">6</div>
+  </div>
+</body>
+</html>

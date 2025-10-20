@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学术前沿探索</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 55px 90px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 44px;
+      font-weight: 700;
+      margin: 0 0 25px 0;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .research-card {
+      background: rgba(224, 122, 89, 0.08);
+      padding: 18px 22px;
+      border-radius: 10px;
+      border-left: 5px solid #E07A59;
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .research-card:nth-child(1) { animation-delay: 0.1s; }
+    .research-card:nth-child(2) { animation-delay: 0.2s; }
+    .research-card:nth-child(3) { animation-delay: 0.3s; }
+    .research-card:nth-child(4) { animation-delay: 0.4s; }
+    .research-card:nth-child(5) { animation-delay: 0.5s; }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .research-title {
+      color: #2B2A27;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .research-icon {
+      font-size: 20px;
+    }
+
+    .research-desc {
+      color: #5D4E42;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+
+    .research-highlight {
+      color: #E07A59;
+      font-weight: 600;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .insight-box {
+      background: rgba(159, 211, 184, 0.15);
+      padding: 16px 22px;
+      border-radius: 8px;
+      margin-top: 18px;
+      border-left: 4px solid #9FD3B8;
+    }
+
+    .insight-text {
+      color: #2B2A27;
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>学术前沿探索</h1>
+
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-title">
+          <span class="research-icon">🔧</span>
+          SWE-Agent
+        </div>
+        <div class="research-desc">
+          为LM配备专门的计算机接口(ACI)，使其能像开发者一样操作代码库、执行测试
+        </div>
+        <div class="research-highlight">
+          → 设计良好的工具接口是关键
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-title">
+          <span class="research-icon">👥</span>
+          AgentCoder
+        </div>
+        <div class="research-desc">
+          多代理协同：程序员代理 + 测试设计代理 + 测试执行代理，模拟人类开发分工
+        </div>
+        <div class="research-highlight">
+          → AI自测代码，迭代改进通过率
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-title">
+          <span class="research-icon">🎯</span>
+          DevAgent
+        </div>
+        <div class="research-desc">
+          领域专家型开发代理，细分角色（前端UI、性能调优等），各司其职协作
+        </div>
+        <div class="research-highlight">
+          → 未来AI可能有专业分工
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-title">
+          <span class="research-icon">🚀</span>
+          Voyager
+        </div>
+        <div class="research-desc">
+          开放式持续学习代理，通过实践积累技能库，自我改进代码能力
+        </div>
+        <div class="research-highlight">
+          → AI可构建自己的函数库复用经验
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-title">
+          <span class="research-icon">🔗</span>
+          CodeChain
+        </div>
+        <div class="research-desc">
+          链式自我改进框架：分解问题 → 生成代码 → 聚类优秀片段 → 自我优化
+        </div>
+        <div class="research-highlight">
+          → 模型自我反思提高代码质量
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-text">
+        💡 学术探索预示：未来AI编程智能体将具备自主分解任务、调用工具、编写执行代码、反复测试改进的能力，更像真正的"AI开发者"
+      </div>
+    </div>
+
+    <div class="page-number">15</div>
+  </div>
+</body>
+</html>

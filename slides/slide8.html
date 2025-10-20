@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDE 类：GitHub Copilot & Others</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 55px 90px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 38px;
+      font-weight: 700;
+      margin: 0 0 25px 0;
+      line-height: 1.2;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .tool-block {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 20px 25px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      border-left: 4px solid #E07A59;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .tool-block:nth-child(2) { animation-delay: 0.1s; }
+    .tool-block:nth-child(3) { animation-delay: 0.2s; }
+    .tool-block:nth-child(4) { animation-delay: 0.3s; }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tool-title {
+      color: #2B2A27;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .tool-text {
+      color: #5D4E42;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>IDE 类：Copilot / Augment / Cline</h1>
+
+    <div class="tool-block">
+      <div class="tool-title">GitHub Copilot（VS Code）</div>
+      <div class="tool-text">
+        补全强、生态深、企业采用成熟<br/>
+        Agent 能力相对保守但体系稳健<br/>
+        微软资源支持，长远看重回巅峰可能性大
+      </div>
+    </div>
+
+    <div class="tool-block">
+      <div class="tool-title">Augment Code</div>
+      <div class="tool-text">
+        强调代码理解与团队协作视角<br/>
+        超大规模代码库场景下的上下文引擎<br/>
+        适合大型后端/全栈项目与长期维护
+      </div>
+    </div>
+
+    <div class="tool-block">
+      <div class="tool-title">Cline（开源）</div>
+      <div class="tool-text">
+        VS Code 开源扩展，透明可定制<br/>
+        Plan/Act 双模式：计划 → 确认 → 逐步执行<br/>
+        适合爱折腾与 BYOK（自带模型密钥）场景
+      </div>
+    </div>
+
+    <div class="page-number">8</div>
+  </div>
+</body>
+</html>

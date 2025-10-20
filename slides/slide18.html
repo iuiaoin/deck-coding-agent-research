@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .accent-shape {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        animation: fadeInShape 2s ease-out forwards;
+    }
+
+    @keyframes fadeInShape {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .shape1 {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(224, 122, 89, 0.12) 0%, rgba(224, 122, 89, 0) 70%);
+        top: -200px;
+        left: -200px;
+        animation-delay: 0.2s;
+    }
+
+    .shape2 {
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(159, 211, 184, 0.08) 0%, rgba(159, 211, 184, 0) 70%);
+        bottom: -250px;
+        right: -250px;
+        animation-delay: 0.5s;
+    }
+
+    .content {
+      z-index: 2;
+      animation: fadeIn 1.2s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h1 {
+      font-size: 72px;
+      font-weight: 700;
+      color: #2B2A27;
+      margin: 0 0 30px 0;
+      letter-spacing: -1px;
+    }
+
+    .quote {
+      font-size: 26px;
+      color: #5D4E42;
+      max-width: 800px;
+      line-height: 1.7;
+      font-weight: 500;
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    .divider {
+      width: 100px;
+      height: 4px;
+      background-color: #E07A59;
+      margin: 35px 0;
+      border-radius: 2px;
+    }
+
+    .contact {
+      margin-top: 40px;
+      font-size: 20px;
+      color: #5D4E42;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="accent-shape shape1"></div>
+    <div class="accent-shape shape2"></div>
+    <div class="content">
+      <h1>谢谢</h1>
+      <div class="divider"></div>
+      <div class="quote">
+        "AI 编程的未来，不是取代工程师<br/>
+        而是让每个工程师都有一个 AI 同伴"
+      </div>
+      <div class="contact">
+        Q & A
+      </div>
+    </div>
+  </div>
+</body>
+</html>

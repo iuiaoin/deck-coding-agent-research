@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>为什么是现在</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 100px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #E07A59;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 35px;
+    }
+
+    .content-box {
+      background: rgba(255, 255, 255, 0.5);
+      border-left: 4px solid #E07A59;
+      padding: 22px 30px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .content-box:nth-child(3) { animation-delay: 0.1s; }
+    .content-box:nth-child(4) { animation-delay: 0.2s; }
+    .content-box:nth-child(5) { animation-delay: 0.3s; }
+
+    .content-title {
+      color: #2B2A27;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .content-text {
+      color: #5D4E42;
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .diagram-hint {
+      color: #9FD3B8;
+      font-size: 15px;
+      font-style: italic;
+      margin-top: 20px;
+      padding-left: 30px;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>为什么是现在</h1>
+    <div class="subtitle">AI 编程的跃迁时刻</div>
+
+    <div class="content-box">
+      <div class="content-title">从"补全"到"自主执行"的演进</div>
+      <div class="content-text">代码补全 → Chat 对话 → Agentic 自主任务，AI 能力本质跃迁</div>
+    </div>
+
+    <div class="content-box">
+      <div class="content-title">项目级能力成为分水岭</div>
+      <div class="content-text">项目级上下文理解、工具调用、长时任务执行成为核心差异</div>
+    </div>
+
+    <div class="content-box">
+      <div class="content-title">成本与安全的新权衡</div>
+      <div class="content-text">本地部署 vs 云端服务、企业合规与数据安全成为关键考量</div>
+    </div>
+
+    <div class="diagram-hint">信息图：IDE 补全 → Chat → Agent 演进路径</div>
+
+    <div class="page-number">3</div>
+  </div>
+</body>
+</html>

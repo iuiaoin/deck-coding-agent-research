@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>横向比较表</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 80px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 35px 0;
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 4px solid #E07A59;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .comparison-table th {
+      background: rgba(224, 122, 89, 0.15);
+      color: #2B2A27;
+      font-weight: 700;
+      padding: 15px 10px;
+      text-align: left;
+      border-bottom: 2px solid #E07A59;
+    }
+
+    .comparison-table td {
+      padding: 12px 10px;
+      color: #5D4E42;
+      border-bottom: 1px solid rgba(93, 78, 66, 0.1);
+      vertical-align: top;
+    }
+
+    .comparison-table tr:hover {
+      background: rgba(224, 122, 89, 0.05);
+    }
+
+    .tool-name {
+      font-weight: 700;
+      color: #2B2A27;
+    }
+
+    .rating {
+      color: #E07A59;
+      font-weight: 600;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 15px 20px;
+      background: rgba(159, 211, 184, 0.12);
+      border-radius: 6px;
+      font-size: 14px;
+      color: #5D4E42;
+      text-align: center;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>横向比较表</h1>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>工具</th>
+          <th>项目理解</th>
+          <th>Agent执行</th>
+          <th>编辑透明度</th>
+          <th>外部工具</th>
+          <th>部署形态</th>
+          <th>学习成本</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tool-name">Claude Code</td>
+          <td><span class="rating">★★★★★</span> 大项目</td>
+          <td><span class="rating">★★★★★</span> 长时任务</td>
+          <td><span class="rating">★★★★☆</span> 需确认</td>
+          <td><span class="rating">★★★★★</span> MCP</td>
+          <td>CLI / 云端</td>
+          <td>中</td>
+        </tr>
+        <tr>
+          <td class="tool-name">Codex CLI</td>
+          <td><span class="rating">★★★★☆</span> 大项目</td>
+          <td><span class="rating">★★★★☆</span> 审批模式</td>
+          <td><span class="rating">★★★★☆</span> 需确认</td>
+          <td><span class="rating">★★★★☆</span> 开源</td>
+          <td>CLI</td>
+          <td>中</td>
+        </tr>
+        <tr>
+          <td class="tool-name">Cursor</td>
+          <td><span class="rating">★★★★☆</span> 手动控制</td>
+          <td><span class="rating">★★★★☆</span> 后台任务</td>
+          <td><span class="rating">★★★★★</span> Diff审阅</td>
+          <td><span class="rating">★★★☆☆</span> 基础</td>
+          <td>桌面IDE</td>
+          <td>中</td>
+        </tr>
+        <tr>
+          <td class="tool-name">Windsurf</td>
+          <td><span class="rating">★★★★★</span> 自动</td>
+          <td><span class="rating">★★★★★</span> Cascade</td>
+          <td><span class="rating">★★★★☆</span> 自动</td>
+          <td><span class="rating">★★★★☆</span> MCP</td>
+          <td>桌面IDE</td>
+          <td>低</td>
+        </tr>
+        <tr>
+          <td class="tool-name">Copilot</td>
+          <td><span class="rating">★★★☆☆</span> 中小项目</td>
+          <td><span class="rating">★★★☆☆</span> 辅助</td>
+          <td><span class="rating">★★★★☆</span> 补全为主</td>
+          <td><span class="rating">★★★☆☆</span> 生态</td>
+          <td>插件</td>
+          <td>低</td>
+        </tr>
+        <tr>
+          <td class="tool-name">Augment Code</td>
+          <td><span class="rating">★★★★★</span> 超大库</td>
+          <td><span class="rating">★★★☆☆</span> 理解为主</td>
+          <td><span class="rating">★★★★☆</span> 协作</td>
+          <td><span class="rating">★★★☆☆</span> 基础</td>
+          <td>桌面IDE</td>
+          <td>中</td>
+        </tr>
+        <tr>
+          <td class="tool-name">Cline</td>
+          <td><span class="rating">★★★★☆</span> 可定制</td>
+          <td><span class="rating">★★★★☆</span> Plan/Act</td>
+          <td><span class="rating">★★★★★</span> 透明</td>
+          <td><span class="rating">★★★★☆</span> 开源</td>
+          <td>插件/BYOK</td>
+          <td>中</td>
+        </tr>
+        <tr>
+          <td class="tool-name">Devin</td>
+          <td><span class="rating">★★★★☆</span> 云端</td>
+          <td><span class="rating">★★★★★</span> 全自动</td>
+          <td><span class="rating">★★★☆☆</span> 黑盒</td>
+          <td><span class="rating">★★★★★</span> 集成</td>
+          <td>云端SaaS</td>
+          <td>低</td>
+        </tr>
+        <tr>
+          <td class="tool-name">V0</td>
+          <td><span class="rating">★★☆☆☆</span> 单页面</td>
+          <td><span class="rating">★★★★☆</span> 前端专精</td>
+          <td><span class="rating">★★★★☆</span> 可视化</td>
+          <td><span class="rating">★★★☆☆</span> 前端</td>
+          <td>云端Web</td>
+          <td>低</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      ✅ 强 / ⚠️ 中等 / — 弱  （根据实际使用体验与文档调研）
+    </div>
+
+    <div class="page-number">10</div>
+  </div>
+</body>
+</html>

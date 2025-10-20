@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>议程</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: #F7F4EF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 90px 120px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide::before {
+        content: '';
+        position: absolute;
+        bottom: -200px;
+        right: -200px;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(224, 122, 89, 0.08), rgba(224, 122, 89, 0));
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    h1 {
+      color: #2B2A27;
+      font-size: 56px;
+      font-weight: 700;
+      margin: 0 0 50px 0;
+      padding: 0 0 20px 0;
+      line-height: 1.2;
+      border-bottom: 4px solid #E07A59;
+      animation: slideInUp 0.6s ease-out;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      color: #5D4E42;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 22px;
+      padding-left: 50px;
+      position: relative;
+      opacity: 0;
+      animation: slideInUp 0.5s ease-out forwards;
+    }
+
+    li:nth-child(1) { animation-delay: 0.2s; }
+    li:nth-child(2) { animation-delay: 0.3s; }
+    li:nth-child(3) { animation-delay: 0.4s; }
+    li:nth-child(4) { animation-delay: 0.5s; }
+    li:nth-child(5) { animation-delay: 0.6s; }
+    li:nth-child(6) { animation-delay: 0.7s; }
+    li:nth-child(7) { animation-delay: 0.8s; }
+    li:nth-child(8) { animation-delay: 0.9s; }
+
+    li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 26px;
+      background-color: #E07A59;
+      border-radius: 3px;
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      color: #5D4E42;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>议程</h1>
+    <ul>
+      <li>为什么现在要关注 Agent</li>
+      <li>市场/产品谱系与评价维度</li>
+      <li>各工具横评（CLI / IDE / 云端 Agent）</li>
+      <li>典型工作流与最佳实践</li>
+      <li>行业格局与技术趋势</li>
+      <li>学术前沿探索</li>
+      <li>未来展望：AI编程智能体的进化方向</li>
+      <li>作为开发者的应对建议</li>
+    </ul>
+    <div class="page-number">2</div>
+  </div>
+</body>
+</html>
